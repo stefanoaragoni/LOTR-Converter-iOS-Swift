@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ExchangeInfo: View {
+    
+    @Environment(\.dismiss) var dismiss             // Allows the View to know it is a sheet. As a result, it can use dismiss
+    
     var body: some View {
         ZStack{
             
@@ -15,7 +18,7 @@ struct ExchangeInfo: View {
             Image(.parchment)
                 .resizable()
                 .ignoresSafeArea()
-                .background(.black)
+                .background(.brown)
                 
             
             VStack{
@@ -46,7 +49,7 @@ struct ExchangeInfo: View {
                 
                 // Done button
                 Button("Done") {
-                    
+                    dismiss()                           // Dismisses the view
                 }
                 .foregroundStyle(.white)
                 .buttonStyle(.borderedProminent)        // Gives button a box around the text
