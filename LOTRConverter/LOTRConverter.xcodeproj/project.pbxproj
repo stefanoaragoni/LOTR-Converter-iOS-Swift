@@ -12,6 +12,7 @@
 		B55A0D2C2B140EF100C0DD58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55A0D2B2B140EF100C0DD58 /* Assets.xcassets */; };
 		B55A0D2F2B140EF100C0DD58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55A0D2E2B140EF100C0DD58 /* Preview Assets.xcassets */; };
 		B55A0D362B14469900C0DD58 /* ExchangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A0D352B14469900C0DD58 /* ExchangeInfo.swift */; };
+		B59DCEB72B14F7420003210B /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DCEB62B14F7420003210B /* ExchangeRate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		B55A0D2B2B140EF100C0DD58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B55A0D2E2B140EF100C0DD58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B55A0D352B14469900C0DD58 /* ExchangeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeInfo.swift; sourceTree = "<group>"; };
+		B59DCEB62B14F7420003210B /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				B55A0D272B140EF000C0DD58 /* LOTRConverterApp.swift */,
 				B55A0D292B140EF000C0DD58 /* ContentView.swift */,
 				B55A0D352B14469900C0DD58 /* ExchangeInfo.swift */,
+				B59DCEB62B14F7420003210B /* ExchangeRate.swift */,
 				B55A0D2B2B140EF100C0DD58 /* Assets.xcassets */,
 				B55A0D2D2B140EF100C0DD58 /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59DCEB72B14F7420003210B /* ExchangeRate.swift in Sources */,
 				B55A0D362B14469900C0DD58 /* ExchangeInfo.swift in Sources */,
 				B55A0D2A2B140EF000C0DD58 /* ContentView.swift in Sources */,
 				B55A0D282B140EF000C0DD58 /* LOTRConverterApp.swift in Sources */,
