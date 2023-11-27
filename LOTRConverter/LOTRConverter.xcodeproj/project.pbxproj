@@ -15,6 +15,7 @@
 		B59DCEB72B14F7420003210B /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DCEB62B14F7420003210B /* ExchangeRate.swift */; };
 		B59DCEB92B1500BD0003210B /* SelectCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DCEB82B1500BD0003210B /* SelectCurrency.swift */; };
 		B59DCEBB2B1511540003210B /* CurrencyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DCEBA2B1511540003210B /* CurrencyIcon.swift */; };
+		B59DCEBD2B1541570003210B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DCEBC2B1541570003210B /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B59DCEB62B14F7420003210B /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		B59DCEB82B1500BD0003210B /* SelectCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrency.swift; sourceTree = "<group>"; };
 		B59DCEBA2B1511540003210B /* CurrencyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyIcon.swift; sourceTree = "<group>"; };
+		B59DCEBC2B1541570003210B /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				B55A0D272B140EF000C0DD58 /* LOTRConverterApp.swift */,
+				B59DCEBC2B1541570003210B /* Currency.swift */,
 				B55A0D292B140EF000C0DD58 /* ContentView.swift */,
 				B59DCEB82B1500BD0003210B /* SelectCurrency.swift */,
 				B59DCEBA2B1511540003210B /* CurrencyIcon.swift */,
@@ -154,6 +157,7 @@
 				B55A0D362B14469900C0DD58 /* ExchangeInfo.swift in Sources */,
 				B55A0D2A2B140EF000C0DD58 /* ContentView.swift in Sources */,
 				B55A0D282B140EF000C0DD58 /* LOTRConverterApp.swift in Sources */,
+				B59DCEBD2B1541570003210B /* Currency.swift in Sources */,
 				B59DCEBB2B1511540003210B /* CurrencyIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

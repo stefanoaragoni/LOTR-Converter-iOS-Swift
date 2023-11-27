@@ -32,7 +32,7 @@ struct SelectCurrency: View {
                     
                     // Loop to fill the 3 column grid
                     ForEach(0..<5) { _ in
-                        
+                        Text("hey")
                     }
                     
                     CurrencyIcon(currencyImage: .copperpenny, currencyName: "Copper Penny")
