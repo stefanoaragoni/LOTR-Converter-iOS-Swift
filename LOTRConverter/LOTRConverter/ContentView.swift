@@ -35,11 +35,7 @@ struct ContentView: View {
             // Background image
             Image(.background)
                 .resizable()            // resizes an image to fit its space
-                .ignoresSafeArea()      // expands the view out of its safe area
-                .onTapGesture {
-                    self.endEditing()
-                }
-                
+                .ignoresSafeArea()      // expands the view out of its safe area                
             
             // Prancing pony view
             VStack{
@@ -86,7 +82,7 @@ struct ContentView: View {
                         .popoverTip(CurrencyTip(), arrowEdge: .bottom)           // IOS17 ADDS TIP
                         
                         // Text field
-                        TextField("Amount", text: $leftAmount)
+                        TextField("Amount", text: $leftAmount) {UIApplication.shared.endEditing()}
                             .textFieldStyle(.roundedBorder)
                             .focused($leftTyping)                 // When not typing, don't change the other amount
                             .onChange(of: leftAmount){
@@ -128,7 +124,7 @@ struct ContentView: View {
                         }
                         
                         // text field
-                        TextField("Amount", text: $rightAmount)
+                        TextField("Amount", text: $rightAmount) {UIApplication.shared.endEditing()}
                             .textFieldStyle(.roundedBorder)
                             .multilineTextAlignment(.trailing)          // Allows the text to be left justified
                             .focused($rightTyping)                     // When not typing, don't change the other amount
@@ -168,11 +164,11 @@ struct ContentView: View {
                 }
                 
             }
-            .onTapGesture {
-                self.endEditing()
-            }
             .task {
                 try? Tips.configure()              // Configures the TipKIT elements
+            }
+            .onTapGesture {
+                self.endEditing()
             }
             .onChange(of: leftCurrency){         // When changing a currency, the amount is updated
                 rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
