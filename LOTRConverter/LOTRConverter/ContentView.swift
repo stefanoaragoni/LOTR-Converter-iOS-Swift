@@ -8,6 +8,12 @@
 import SwiftUI
 import TipKit
 
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+
 struct ContentView: View {
     
     // Stored property
@@ -30,6 +36,9 @@ struct ContentView: View {
             Image(.background)
                 .resizable()            // resizes an image to fit its space
                 .ignoresSafeArea()      // expands the view out of its safe area
+                .onTapGesture {
+                    self.endEditing()
+                }
                 
             
             // Prancing pony view
@@ -85,6 +94,7 @@ struct ContentView: View {
                                     rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
                                 }
                             }
+                            .keyboardType(.decimalPad)
                             
                     }
                     
@@ -128,7 +138,9 @@ struct ContentView: View {
                                 }
                                 
                             }
+                            .keyboardType(.decimalPad)
                     }
+                    
                 }
                 .padding()
                 .background(.black.opacity(0.5))         // Adds background to HStack
@@ -156,6 +168,9 @@ struct ContentView: View {
                 }
                 
             }
+            .onTapGesture {
+                self.endEditing()
+            }
             .task {
                 try? Tips.configure()              // Configures the TipKIT elements
             }
@@ -169,6 +184,10 @@ struct ContentView: View {
                 SelectCurrency(topCurrency: $leftCurrency, bottomCurrency: $rightCurrency)
             }
         }
+    }
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
     }
     
 }
