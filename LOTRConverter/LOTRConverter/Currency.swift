@@ -54,7 +54,9 @@ enum Currency: Double, CaseIterable, Identifiable {
         }
     }
     
-    func convert(amountString: String, currency: Currency) -> String {
+    
+    // _ allows to not have to use the name of the parameter when calling, to allows a custom name when calling
+    func convert(_ amountString: String, to currency: Currency) -> String {
         
         guard let doubleAmount = Double(amountString) else { return "" }
         
