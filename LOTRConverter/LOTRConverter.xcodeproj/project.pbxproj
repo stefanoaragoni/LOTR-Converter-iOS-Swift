@@ -17,6 +17,7 @@
 		B59DCEBB2B1511540003210B /* CurrencyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DCEBA2B1511540003210B /* CurrencyIcon.swift */; };
 		B59DCEBD2B1541570003210B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DCEBC2B1541570003210B /* Currency.swift */; };
 		B59DCEBF2B1576980003210B /* IconGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DCEBE2B1576980003210B /* IconGrid.swift */; };
+		B5B963692B16823A00CD7F7F /* CurrencyTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B963682B16823A00CD7F7F /* CurrencyTip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B59DCEBA2B1511540003210B /* CurrencyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyIcon.swift; sourceTree = "<group>"; };
 		B59DCEBC2B1541570003210B /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		B59DCEBE2B1576980003210B /* IconGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGrid.swift; sourceTree = "<group>"; };
+		B5B963682B16823A00CD7F7F /* CurrencyTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				B59DCEBA2B1511540003210B /* CurrencyIcon.swift */,
 				B55A0D352B14469900C0DD58 /* ExchangeInfo.swift */,
 				B59DCEB62B14F7420003210B /* ExchangeRate.swift */,
+				B5B963682B16823A00CD7F7F /* CurrencyTip.swift */,
 				B55A0D2B2B140EF100C0DD58 /* Assets.xcassets */,
 				B55A0D2D2B140EF100C0DD58 /* Preview Content */,
 			);
@@ -160,6 +163,7 @@
 				B59DCEB92B1500BD0003210B /* SelectCurrency.swift in Sources */,
 				B55A0D362B14469900C0DD58 /* ExchangeInfo.swift in Sources */,
 				B55A0D2A2B140EF000C0DD58 /* ContentView.swift in Sources */,
+				B5B963692B16823A00CD7F7F /* CurrencyTip.swift in Sources */,
 				B55A0D282B140EF000C0DD58 /* LOTRConverterApp.swift in Sources */,
 				B59DCEBD2B1541570003210B /* Currency.swift in Sources */,
 				B59DCEBB2B1511540003210B /* CurrencyIcon.swift in Sources */,

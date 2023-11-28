@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct ContentView: View {
     
@@ -73,6 +74,7 @@ struct ContentView: View {
                         .onTapGesture {
                             showSelectCurrency.toggle()
                         }
+                        .popoverTip(CurrencyTip(), arrowEdge: .bottom)           // IOS17 ADDS TIP
                         
                         // Text field
                         TextField("Amount", text: $leftAmount)
@@ -83,7 +85,6 @@ struct ContentView: View {
                                     rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
                                 }
                             }
-                            .keyboardType(.decimalPad)              // Changes keyboard to decimalpad
                             
                     }
                     
@@ -127,7 +128,6 @@ struct ContentView: View {
                                 }
                                 
                             }
-                            .keyboardType(.decimalPad)              // Changes keyboard to decimalpad
                     }
                 }
                 .padding()
@@ -155,6 +155,9 @@ struct ContentView: View {
                     }
                 }
                 
+            }
+            .task {
+                try? Tips.configure()              // Configures the TipKIT elements
             }
             .onChange(of: leftCurrency){         // When changing a currency, the amount is updated
                 rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
