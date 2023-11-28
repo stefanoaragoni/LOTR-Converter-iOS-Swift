@@ -11,6 +11,8 @@ struct SelectCurrency: View {
     
     @Environment(\.dismiss) var dismiss
     
+    @State var currency: Currency
+    
     var body: some View {
         
         ZStack{
@@ -32,7 +34,23 @@ struct SelectCurrency: View {
                     
                     // Loop to fill the 3 column grid
                     ForEach(Currency.allCases) { currency in
-                        CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
+                        
+                        if self.currency == currency {
+                            CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
+                                .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)            // Creates a shadow around a Currency Icon
+                                .overlay {                                   // Adds a black line on top
+                                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                                        .stroke(lineWidth: 3)
+                                        .opacity(0.5)
+                                }
+                        }
+                        
+                        else {
+                            CurrencyIcon(currencyImage: currency.image, currencyName: currency.name)
+                                .onTapGesture {
+                                    self.currency = currency              // onTapGesture allows to tap on things
+                                }
+                        }
                     }
                     
                 }
@@ -77,5 +95,5 @@ struct SelectCurrency: View {
 }
 
 #Preview {
-    SelectCurrency()
+    SelectCurrency(currency: .silverPiece)
 }
