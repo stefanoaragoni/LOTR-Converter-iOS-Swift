@@ -83,6 +83,7 @@ struct ContentView: View {
                                     rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
                                 }
                             }
+                            .keyboardType(.decimalPad)              // Changes keyboard to decimalpad
                             
                     }
                     
@@ -119,13 +120,14 @@ struct ContentView: View {
                         TextField("Amount", text: $rightAmount)
                             .textFieldStyle(.roundedBorder)
                             .multilineTextAlignment(.trailing)          // Allows the text to be left justified
-                            .focused($rightTyping)
+                            .focused($rightTyping)                     // When not typing, don't change the other amount
                             .onChange(of: rightAmount){
                                 if rightTyping {
                                     leftAmount = rightCurrency.convert(rightAmount, to: leftCurrency)
                                 }
                                 
                             }
+                            .keyboardType(.decimalPad)              // Changes keyboard to decimalpad
                     }
                 }
                 .padding()
@@ -154,11 +156,18 @@ struct ContentView: View {
                 }
                 
             }
+            .onChange(of: leftCurrency){         // When changing a currency, the amount is updated
+                rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
+            }
+            .onChange(of: rightCurrency){
+                leftAmount = rightCurrency.convert(rightAmount, to: leftCurrency)
+            }
             .sheet(isPresented: $showSelectCurrency) {
                 SelectCurrency(topCurrency: $leftCurrency, bottomCurrency: $rightCurrency)
             }
         }
     }
+    
 }
 
 #Preview {
