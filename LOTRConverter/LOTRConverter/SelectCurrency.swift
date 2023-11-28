@@ -11,8 +11,8 @@ struct SelectCurrency: View {
     
     @Environment(\.dismiss) var dismiss
     
-    @State var topCurrency: Currency
-    @State var bottomCurrency: Currency
+    @Binding var topCurrency: Currency
+    @Binding var bottomCurrency: Currency
     
     
     var body: some View {
@@ -32,7 +32,7 @@ struct SelectCurrency: View {
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 
                 // Currency icons
-                IconGrid(currency: topCurrency)
+                IconGrid(currency: $topCurrency)
                 
                 // Text
                 Text("Select the currency you would like to convert to: ")
@@ -40,7 +40,7 @@ struct SelectCurrency: View {
                     .padding(.top, 30.0)
                 
                 // Currency icons
-                IconGrid(currency: bottomCurrency)
+                IconGrid(currency: $bottomCurrency)
                 
                 
                 // Done button
@@ -67,5 +67,5 @@ struct SelectCurrency: View {
 }
 
 #Preview {
-    SelectCurrency(topCurrency: .silverPiece, bottomCurrency: .goldPiece)
+    SelectCurrency(topCurrency: .constant(.copperPenny), bottomCurrency: .constant(.goldPenny))
 }
